@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Bundle Name="BootstrapperWixTHREE" Version="1.0.001" Manufacturer="HP Inc." UpgradeCode="f2d39275-b257-46da-b8fd-c98958f50433">
+		<BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense" />
+
+		<Chain>
+
+      <MsiPackage SourceFile="..\MSIwixFour\bin\x64\Debug\en-US\MSIwixFour.msi" Cache="yes" CacheId="main.2024" Id="main.2024" ForcePerMachine="yes" Vital="yes" Visible="yes">
+      </MsiPackage>
+      
+      <MsiPackage SourceFile="..\MSIwixThree\bin\Debug\MSIwixThree.msi" Cache="yes" CacheId="wixthree.2024" Id="wixthree.2024" ForcePerMachine="yes" Vital="yes" Visible="yes">
+      </MsiPackage>
+
+      <MsiPackage SourceFile="..\MSIwixThree2\bin\Debug\MSIwixThree2.msi" Cache="yes" CacheId="wixthree2.2024" Id="wixthree2.2024" ForcePerMachine="yes" Vital="yes" Visible="yes">
+      </MsiPackage>
+      
+		</Chain>
+	</Bundle>
+</Wix>

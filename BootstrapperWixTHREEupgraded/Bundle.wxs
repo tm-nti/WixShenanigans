@@ -1,0 +1,25 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Bundle Name="BootstrapperWixTHREE" Version="1.0.002" Manufacturer="HP Inc." UpgradeCode="f2d39275-b257-46da-b8fd-c98958f50433">
+    
+    <WixVariable Id="WixStdbaThemeXml" Value="RtfTheme.xml" />
+
+    <RelatedBundle Id="f2d39275-b257-46da-b8fd-c98958f50433" Action="upgrade" />
+    
+    <BootstrapperApplication>
+      <WixStandardBootstrapperApplication Theme="rtfLicense" LicenseFile="license.rtf" xmlns="http://wixtoolset.org/schemas/v4/wxs/bal" SuppressOptionsUI="yes" />
+    </BootstrapperApplication>
+
+    <Chain>
+
+      <MsiPackage SourceFile="..\MSIwixFour\bin\x64\Debug\en-US\MSIwixFour.msi" Cache="keep" CacheId="main.2024" Id="main.2024" ForcePerMachine="yes" Vital="true" Visible="true">
+      </MsiPackage>
+
+      <MsiPackage SourceFile="..\MSIwixThree\bin\Debug\MSIwixThree.msi" Cache="keep" CacheId="wixthree.2024" Id="wixthree.2024" ForcePerMachine="yes" Vital="true" Visible="true">
+      </MsiPackage>
+
+      <MsiPackage SourceFile="..\MSIwixThree2\bin\Debug\MSIwixThree2.msi" Cache="keep" CacheId="wixthree2.2024" Id="wixthree2.2024" ForcePerMachine="yes" Vital="true" Visible="true">
+      </MsiPackage>
+
+    </Chain>
+  </Bundle>
+</Wix>

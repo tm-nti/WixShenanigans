@@ -1,0 +1,16 @@
+﻿<Project Sdk="WixToolset.Sdk/4.0.1">
+  <PropertyGroup>
+    <OutputName>BootstrapperWixTHREE.v1.0.002</OutputName>
+    <OutputType>Bundle</OutputType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DefineConstants>Debug</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="RtfTheme.xml" />
+    <Content Include="license.rtf" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="WixToolset.Bal.wixext" Version="4.0.1" />
+  </ItemGroup>
+</Project>
